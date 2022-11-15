@@ -1,0 +1,74 @@
+**/logs/*
+**/lib/**
+**/data/**
+
+# Python runtime file
+**/__pycache__/**
+
+# Eclipse IDE files
+**/.classpath
+**/.project
+**/.settings/
+# src/main/resources/
+# intellij IDE files
+**/*.iml
+**/.idea/
+**/*.log
+**/*.ipr
+**/*.iws
+# Apple OS X related
+**/.DS_Store
+derby-tsfile-db
+
+# build generated
+**/target/
+
+*.txt
+
+*.jar
+*.gz
+*.tar.gz
+*.tar
+*.tokens
+#src/test/resources/logback.xml
+
+### CSV ###
+*.csv
+### Maven ###
+grafana/target/
+!grafana/.mvn/wrapper/maven-wrapper.jar
+grafana/.mvn/
+
+grafana/logs/
+*.log
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+
+### NetBeans ###
+**/nbproject/private/
+**/nbbuild/
+**/dist/
+**/nbdist/
+**/.nb-gradle/
+
+### vscode project
+**/.vscode/
+
+**/lib/
+/target/
+*.tsfile
+tsfile/src/test/resources/*.ts
+
+
+
+
+
+
