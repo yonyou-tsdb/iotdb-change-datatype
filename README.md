@@ -7,13 +7,17 @@ iotdb change datatype tool by rewrite tsfile and append mlog.bin
      int32 -> int64
      float -> double
      
+# 编译打包
+   
+     mvn clean compile assembly:single 
+     
 # 步骤1：修改前准备
   （1）应用层停止写入 
    
   （2）执行flush操作，关闭iotdb server
    
-    cli命令行执行flush 
-     执行./stop-server.sh 
+     cli命令行执行flush
+     执行./stop-server.sh
     
   （3）备份待修改存储组的tsfile文件及mlog.bin文件
     
@@ -22,7 +26,7 @@ iotdb change datatype tool by rewrite tsfile and append mlog.bin
 （1）执行命令如下：
     对非对齐时间序列对应存储组执行
     
-    java -jar mars-1.0-SNAPSHOT-jar-with-dependencies.jar /xxx/xxx/data/sequence/root.iot/0/0 /xxx/xxx/xxx  /xxx/xxx/xxx/config.txt
+    java -jar change-datatype-1.0-SNAPSHOT-jar-with-dependencies.jar /xxx/xxx/data/sequence/root.iot/0/0 /xxx/xxx/xxx  /xxx/xxx/xxx/config.txt
     参数说明：
     tsfile所在文件夹：/xxx/xxx/data/sequence/root.iot/0/0
     iotdb服务system文件夹下schema下的mlog.bin path：/xxx/xxx/xxx
