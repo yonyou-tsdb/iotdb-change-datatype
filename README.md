@@ -9,13 +9,14 @@ iotdb change datatype tool by rewrite tsfile and append mlog.bin
      float -> double
      同时支持相同时间类型修改编码方式，压缩方式
      使用前提：需要停服
+     支持版本： v0.12.*, v0.13.*
      
 # 编译打包
    
      mvn clean compile assembly:single 
      
 # 步骤1：修改前准备
-  （1）应用层停止写入 
+  （1）应用层停止写入 ```set readOnly```
    
   （2）执行flush操作，关闭iotdb server
    
@@ -47,7 +48,7 @@ iotdb change datatype tool by rewrite tsfile and append mlog.bin
     第二列：数据类型  boolean：0，int32：1，int64：2，float：3，double：4
     第三列：编码类型  plain：0，dictionary：1，rle：2，diff：3，ts_2diff：4，bitmap：5，regular：7，gorilla：8
     第四列：压缩类型  uncompressed：0，snappy：1，gzip：2，lz0：3，sdt：4，lz4：7
-    数据类型，编码类型，压缩类型必须服务iotdb规范  
+    数据类型，编码类型，压缩类型必须符合iotdb规范  
     
     
  # 步骤3：启动服务
