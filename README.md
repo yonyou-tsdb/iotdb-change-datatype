@@ -8,8 +8,10 @@ iotdb change datatype tool by rewrite tsfile and append mlog.bin
      int32 -> int64
      float -> double
      同时支持相同时间类型修改编码方式，压缩方式
+     注：
      使用前提：需要停服
      支持版本： v0.13.*
+     只支持修改非对齐时间序列
      
 # 编译打包
    
